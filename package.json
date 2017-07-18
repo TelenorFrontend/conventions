@@ -4,7 +4,11 @@
   "description": "A repo containing our best practices and conventions for frontend projects.",
   "main": "index.js",
   "scripts": {
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "release": "standard-version --silent",
+    "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,7 @@
   "homepage": "https://github.com/TelenorFrontend/conventions#readme",
   "devDependencies": {
     "husky": "^0.14.3",
+    "standard-version": "^4.2.0",
     "validate-commit-msg": "^2.12.2"
   }
 }
