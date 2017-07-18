@@ -1,0 +1,19 @@
+{
+  "name": "tn-conventions",
+  "version": "0.1.0",
+  "description": "A repo containing our best practices and conventions for frontend projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TelenorFrontend/conventions.git"
+  },
+  "author": "Per Kristian Kummermo (pkkummermo)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TelenorFrontend/conventions/issues"
+  },
+  "homepage": "https://github.com/TelenorFrontend/conventions#readme"
+}
