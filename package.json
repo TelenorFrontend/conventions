@@ -4,7 +4,7 @@
   "description": "A repo containing our best practices and conventions for frontend projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/TelenorFrontend/conventions/issues"
   },
-  "homepage": "https://github.com/TelenorFrontend/conventions#readme"
+  "homepage": "https://github.com/TelenorFrontend/conventions#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "validate-commit-msg": "^2.12.2"
+  }
 }
