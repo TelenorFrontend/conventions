@@ -1,3 +1,6 @@
 {
-  "extends": "./javascript/.eslintrc.json"
+  "extends": "./javascript/.eslintrc.json",
+  "rules": {
+    "no-console": "off"
+  }
 }
