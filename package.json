@@ -2,9 +2,13 @@
   "name": "tn-conventions",
   "version": "0.2.0",
   "description": "A repo containing our best practices and conventions for frontend projects.",
-  "main": "index.js",
+  "main": "src/main.js",
+  "bin": {
+    "tn-conventions": "src/main.js"
+  },
   "scripts": {
     "commitmsg": "validate-commit-msg",
+    "test": "eslint src/**/*.js",
     "release": "standard-version --silent",
     "release:patch": "npm run release -- --release-as patch",
     "release:minor": "npm run release -- --release-as minor",
@@ -21,8 +25,16 @@
   },
   "homepage": "https://github.com/TelenorFrontend/conventions#readme",
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.2.0",
     "husky": "^0.14.3",
     "standard-version": "^4.2.0",
     "validate-commit-msg": "^2.12.2"
+  },
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "fs-extra": "^4.0.0",
+    "npm-add-script": "^1.1.0",
+    "prompt": "^1.0.0"
   }
 }
