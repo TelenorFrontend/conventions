@@ -243,6 +243,12 @@
       }
     ],
     // https://eslint.org/docs/rules/prefer-promise-reject-errors
-    "prefer-promise-reject-errors": 2
+    "prefer-promise-reject-errors": 2,
+    "no-multi-spaces": "error",
+    "space-in-parens": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
   }
 }
