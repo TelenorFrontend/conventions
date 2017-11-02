@@ -1,0 +1,26 @@
+{
+  "name": "@telenorfrontend/eslint-config-telenor",
+  "version": "0.1.3",
+  "description": "ESLint for frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TelenorFrontend/conventions.git"
+  },
+  "keywords": [
+    "eslint",
+    "telenor"
+  ],
+  "peerDependencies": {
+    "eslint": ">= 4"
+  },
+  "author": "Per Kristian Kummermo",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TelenorFrontend/conventions/issues"
+  },
+  "homepage": "https://github.com/TelenorFrontend/conventions#readme"
+}
