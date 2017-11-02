@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/TelenorFrontend/conventions/compare/v0.3.3...v0.4.0) (2017-11-02)
+
+
+### Features
+
+* **eslint:** publish eslint to [@telenorfrontend](https://github.com/telenorfrontend), fixes [#1](https://github.com/TelenorFrontend/conventions/issues/1) ([18bf17d](https://github.com/TelenorFrontend/conventions/commit/18bf17d))
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/TelenorFrontend/conventions/compare/v0.3.2...v0.3.3) (2017-10-17)
 
