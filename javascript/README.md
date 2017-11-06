@@ -24,7 +24,7 @@ npm install --save-dev @telenorfrontend/eslint-config-telenor
 
 ### Add lint script to package.json
 
-```json
+```
 scripts: {
   ...
   "test:eslint": "eslint list of your sources",
