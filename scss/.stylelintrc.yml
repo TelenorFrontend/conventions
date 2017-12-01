@@ -238,3 +238,10 @@ rules:
   # Since mixins are explicit (`@include`) and parens are unnecessary for argumentless mixins, they
   # can be omitted.
   scss/at-mixin-argumentless-call-parentheses: never
+
+  # all rules should be on the form
+  # rule {
+  #    ...
+  # }
+  block-opening-brace-newline-after: always
+  block-closing-brace-newline-before: always
