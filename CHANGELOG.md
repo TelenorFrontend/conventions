@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/TelenorFrontend/conventions/compare/v0.4.0...v0.5.0) (2017-12-01)
+
+
+### Bug Fixes
+
+* **stylelint:** disallow single line rules ([5feb399](https://github.com/TelenorFrontend/conventions/commit/5feb399))
+
+
+### Features
+
+* **typescript:** add TypeScript config. Fixes [#2](https://github.com/TelenorFrontend/conventions/issues/2) ([20a4b78](https://github.com/TelenorFrontend/conventions/commit/20a4b78))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/TelenorFrontend/conventions/compare/v0.3.3...v0.4.0) (2017-11-02)
 
