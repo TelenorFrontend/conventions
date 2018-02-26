@@ -7,9 +7,16 @@ We mainly use stylelint to lint our scss-files. We lint for typical mistakes fou
 To use style-lint we need to install it along with some dependencies.
 
 ### Install dependencies
+
+#### Install all at once
+```
+npm i --save-dev stylelint stylelint-config-standard stylelint-order stylelint-scss @telenorfrontend/stylelint-config-telenor
+```
+
+#### Install separately
 Install stylelint:
 ```
-npm install --save-dev stylelint@^7.11.0
+npm install --save-dev stylelint
 ```
 
 Install config standard:
@@ -19,23 +26,23 @@ npm install --save-dev stylelint-config-standard
 
 Install stylelint order:
 ```
-npm install --save-dev stylelint-order@^0.5.0
+npm install --save-dev stylelint-order
 ```
 
 Install stylelint scss:
 
 ```
-npm install --save-dev stylelint-scss@^1.4.0
+npm install --save-dev stylelint-scss
 ```
 
-Add the conventions repo to your dependencies:
+Add the stylelint config repo to your dependencies:
 ```
-npm install --save-dev https://github.com/TelenorFrontend/conventions.git
+npm install --save-dev @telenorfrontend/stylelint-config-telenor
 ```
 
 ### Add lint script to package.json
 
-```json
+```
 scripts: [
   ...
   "test:stylelint": "stylelint list of your sources",
@@ -48,5 +55,5 @@ scripts: [
 Create your local `.stylelintrc.yml` and add the following
 
 ```yml
-extends: ./node_modules/tn-conventions/scss/.stylelintrc.yml
+extends: @telenorfrontend/stylelint-config-telenor
 ```
