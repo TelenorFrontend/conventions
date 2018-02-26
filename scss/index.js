@@ -9,6 +9,7 @@ module.exports = {
         "stylelint-order"
     ],
     "rules": {
+        "at-rule-no-unknown": null,
         // Follow best practices
         "font-family-name-quotes": "always-where-recommended",
         // http://stackoverflow.com/questions/2168855/is-quoting-the-value-of-url-really-necessary
