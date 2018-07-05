@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/TelenorFrontend/conventions/compare/v0.5.0...v0.6.0) (2018-07-05)
+
+
+### Features
+
+* **cli-autocomplete:** add autocomplete features to cli ([62f6207](https://github.com/TelenorFrontend/conventions/commit/62f6207))
+* **javascript:** add updated installs for javascript ([d71a4fe](https://github.com/TelenorFrontend/conventions/commit/d71a4fe))
+* **scss:** add publishable scss styles ([64028c3](https://github.com/TelenorFrontend/conventions/commit/64028c3))
+* **scss:** update dependencies and install for scss ([6a02019](https://github.com/TelenorFrontend/conventions/commit/6a02019))
+* **typescript:** add typescript to cli ([d0021da](https://github.com/TelenorFrontend/conventions/commit/d0021da))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/TelenorFrontend/conventions/compare/v0.4.0...v0.5.0) (2017-12-01)
 
