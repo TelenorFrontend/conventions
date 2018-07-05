@@ -8,7 +8,7 @@ Install using
 npm i -g @telenorfrontend/tn-conventions
 ```
 
-You will be promted if you'd like autocomplete for the CLI. Your choice really.
+You will be prompted if you'd like autocomplete for the CLI. Your choice really.
 
 ### Using the wizard
 
