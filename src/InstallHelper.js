@@ -30,26 +30,28 @@ const INSTALL_INSTRUCTIONS = {
     },
     JAVASCRIPT: {
         prettyName: "JavaScript",
-        installMessage: "Adding dependencies and adding .eslintrc",
+        installMessage: "Adding eslint and adding .eslintrc",
         before: () => {
             ifExistsTakeBackup(".eslintrc.json");
         },
         install: () => {
-            installNpmDependencies(["eslint", "babel-eslint", "https://github.com/TelenorFrontend/conventions.git"]);
+            installNpmDevDependencies(["eslint", "babel-eslint", "https://github.com/TelenorFrontend/conventions.git"]);
             copySync(path.resolve(__dirname, "../boilerplate/.eslintrc.json"), ".eslintrc.json");
             npmAddScript({
                 key: "test:eslint",
-                value: "eslint your sources"
+                value: "eslint <your sources>"
             });
         },
-        after: () => {}
+        after: () => {
+            log(chalk.yellow("Don't forget to go into package.json and replace <your sources> with the correct path to your sources"));
+        }
     },
     GIT: {
         prettyName: "Git",
-        installMessage: "Adding dependencies",
+        installMessage: "Adding husky for git prehook and adding validating script",
         before: () => {},
         install: () => {
-            installNpmDependencies(["husky", "validate-commit-msg"]);
+            installNpmDevDependencies(["husky", "validate-commit-msg"]);
             npmAddScript({
                 key: "commitmsg",
                 value: "validate-commit-msg"
@@ -59,12 +61,12 @@ const INSTALL_INSTRUCTIONS = {
     },
     SCSS: {
         prettyName: "SCSS",
-        installMessage: "Adding dependencies and adding .stylelintrc.yml",
+        installMessage: "Adding stylelint and adding .stylelintrc.yml",
         before: () => {
             ifExistsTakeBackup(".stylelintrc.yml");
         },
         install: () => {
-            installNpmDependencies([
+            installNpmDevDependencies([
                 "stylelint",
                 "stylelint-config-standard",
                 "stylelint-order",
@@ -74,17 +76,19 @@ const INSTALL_INSTRUCTIONS = {
             copySync(path.resolve(__dirname, "../boilerplate/.stylelintrc.yml"), ".stylelintrc.yml");
             npmAddScript({
                 key: "test:stylelint",
-                value: "stylelint list of your sources"
+                value: "stylelint <your sources>"
             });
         },
-        after: () => {}
+        after: () => {
+            log(chalk.yellow("Don't forget to go into package.json and replace <your sources> with the correct path to your sources"));
+        }
     },
     VERSIONING: {
         prettyName: "Versioning",
-        installMessage: "Adding dependencies",
+        installMessage: "Adding standard-version to project for semver control",
         before: () => {},
         install: () => {
-            installNpmDependencies([
+            installNpmDevDependencies([
                 "standard-version"
             ]);
             npmAddScript({
@@ -104,7 +108,9 @@ const INSTALL_INSTRUCTIONS = {
                 value: "npm run release -- --release-as major"
             });
         },
-        after: () => {}
+        after: () => {
+            log(chalk.yellow("To be able to use versioning, make sure you also install git conventions"));
+        }
     }
 };
 const ifExistsTakeBackup = (file) => {
@@ -124,7 +130,7 @@ const moveToBackup = (file) => {
     moveSync(file, backupFileName);
 };
 
-const installNpmDependencies = (listOfDependencies) => {
+const installNpmDevDependencies = (listOfDependencies) => {
     execSync(`npm install --save-dev ${listOfDependencies.join(" ")} --silent`);
 };
 
@@ -139,7 +145,8 @@ exports.Installer = {
             return;
         }
 
-        log(chalk.dim(`Installing ${installInstructions.prettyName}`));
+        log(chalk.dim(`${installInstructions.prettyName}`));
+        log(chalk.dim(`${installInstructions.installMessage}`));
 
         try {
             installInstructions.before();
