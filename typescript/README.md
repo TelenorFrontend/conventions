@@ -7,6 +7,12 @@ We mainly use tslint to lint our TypeScript.
 For tslint to work properly we need to install tslint as a dev-dependency.
 
 ### Install dependencies
+
+```
+npm install --save-dev tslint @telenorfrontend/tslint-config-telenor
+```
+
+#### Install seperately
 Install tslint:
 ```
 npm install --save-dev tslint

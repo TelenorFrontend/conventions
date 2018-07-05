@@ -7,6 +7,12 @@ We mainly use eslint to lint our JavaScript.
 For eslint to work properly we need to install eslint as a dev-dependency.
 
 ### Install dependencies
+
+```
+npm install --save-dev eslint@^4.2.0 babel-eslint@^7.2.0 @telenorfrontend/eslint-config-telenor
+```
+
+#### Install seperately
 Install eslint:
 ```
 npm install --save-dev eslint@^4.2.0
@@ -27,7 +33,7 @@ npm install --save-dev @telenorfrontend/eslint-config-telenor
 ```
 scripts: {
   ...
-  "test:eslint": "eslint list of your sources",
+  "test:eslint": "eslint <your sources>",
   ...
 }
 ```
