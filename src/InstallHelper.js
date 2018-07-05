@@ -35,7 +35,7 @@ const INSTALL_INSTRUCTIONS = {
             ifExistsTakeBackup(".eslintrc.json");
         },
         install: () => {
-            installNpmDevDependencies(["eslint", "babel-eslint", "https://github.com/TelenorFrontend/conventions.git"]);
+            installNpmDevDependencies(["eslint", "babel-eslint", "@telenorfrontend/eslint-config-telenor"]);
             copySync(path.resolve(__dirname, "../boilerplate/.eslintrc.json"), ".eslintrc.json");
             npmAddScript({
                 key: "test:eslint",
