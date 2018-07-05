@@ -101,7 +101,7 @@ if (args[0] === "init" && args.length === 1) {
     if (["javascript", "js"].includes(convention)) {
         Installer.install(INSTALL_TYPES.JAVASCRIPT);
     } else if (["typescript", "ts"].includes(convention)) {
-        log(chalk.yellow("Not implemented yet"));
+        Installer.install(INSTALL_TYPES.TYPESCRIPT);
     } else if (["scss", "sass"].includes(convention)) {
         Installer.install(INSTALL_TYPES.SCSS);
     } else if (["git"].includes(convention)) {
