@@ -89,7 +89,7 @@ const INSTALL_INSTRUCTIONS = {
                 "stylelint-config-standard",
                 "stylelint-order",
                 "stylelint-scss",
-                "https://github.com/TelenorFrontend/conventions.git"
+                "@telenorfrontend/stylelint-config-telenor"
             ]);
             copySync(path.resolve(__dirname, "../boilerplate/.stylelintrc.yml"), ".stylelintrc.yml");
             npmAddScript({
