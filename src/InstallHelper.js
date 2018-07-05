@@ -46,6 +46,24 @@ const INSTALL_INSTRUCTIONS = {
             log(chalk.yellow("Don't forget to go into package.json and replace <your sources> with the correct path to your sources"));
         }
     },
+    TYPESCRIPT: {
+        prettyName: "TypeScript",
+        installMessage: "Adding tslint and adding tslint.json",
+        before: () => {
+            ifExistsTakeBackup("tslint.json");
+        },
+        install: () => {
+            installNpmDevDependencies(["tslint", "@telenorfrontend/tslint-config-telenor"]);
+            copySync(path.resolve(__dirname, "../boilerplate/tslint.json"), "tslint.json");
+            npmAddScript({
+                key: "test:tslint",
+                value: "tslint <your sources>"
+            });
+        },
+        after: () => {
+            log(chalk.yellow("Don't forget to go into package.json and replace <your sources> with the correct path to your sources"));
+        }
+    },
     GIT: {
         prettyName: "Git",
         installMessage: "Adding husky for git prehook and adding validating script",

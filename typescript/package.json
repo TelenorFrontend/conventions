@@ -14,6 +14,9 @@
     "tslint",
     "telenor"
   ],
+  "peerDependencies": {
+    "tslint": ">= 5"
+  },
   "author": "Per Kristian Kummermo",
   "license": "Apache-2.0",
   "bugs": {
