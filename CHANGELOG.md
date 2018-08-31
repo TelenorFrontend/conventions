@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.2"></a>
+## [0.6.2](https://github.com/TelenorFrontend/conventions/compare/v0.6.1...v0.6.2) (2018-08-31)
+
+
+### Bug Fixes
+
+* **audits:** fix security issues ([c4bca00](https://github.com/TelenorFrontend/conventions/commit/c4bca00))
+
+
+
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/TelenorFrontend/conventions/compare/v0.6.0...v0.6.1) (2018-07-05)
 
