@@ -28,7 +28,7 @@ npm install --save-dev @telenorfrontend/tslint-config-telenor
 ```
 scripts: {
   ...
-  "test:tslint": "tslint list of your sources",
+  "test:tslint": "tslint <your sources>",
   ...
 }
 ```
