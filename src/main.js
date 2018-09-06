@@ -3,6 +3,7 @@ const omelette = require("omelette");
 const prompt = require("prompt");
 const chalk = require("chalk");
 const { existsSync } = require("fs");
+const isInstalledGlobally = require("is-installed-globally");
 
 const { Installer, INSTALL_TYPES } = require("./InstallHelper");
 const { wizardPromptSchema, autocompletePromptSchema } = require("./prompt/prompts");
@@ -35,7 +36,7 @@ completion.on("convention", ({ reply }) => {
 
 completion.init();
 
-if (~process.argv.indexOf("--autocomplete")) {
+if (isInstalledGlobally && ~process.argv.indexOf("--autocomplete")) {
     prompt.start({ noHandleSIGINT: true });
     prompt.get(autocompletePromptSchema, (_, result) => {
         if (result.autocompletePrompt) {
